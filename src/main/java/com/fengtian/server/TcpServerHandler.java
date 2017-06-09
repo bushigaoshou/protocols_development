@@ -44,7 +44,7 @@ public class TcpServerHandler extends SimpleChannelInboundHandler<Object> {
 	@Override
 	public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
 		System.out.println(11111);
-		System.out.println(11111);
+		System.out.println(222222);
 		
 		log.info("当前连接大小：" + ctxs.size());
 		ctxs.put(UUID.randomUUID().toString(), ctx);
