@@ -63,7 +63,8 @@ public class TcpServerHandler extends SimpleChannelInboundHandler<Object> {
 		String data = str.substring(36, str.length() - 4); // 数据域
 		String cmd = data.substring(0, 4);// 命令码
 		String crc16 = str.substring(str.length() - 4);// crc16较验
-
+         
+		 
 		// 变量声明
 		String chargingId = deviceId.substring(0, 14);// 充电桩id
 		String outletNum = "";// 插座编号
