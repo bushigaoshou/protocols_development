@@ -50,6 +50,10 @@ public class TcpServerHandler extends SimpleChannelInboundHandler<Object> {
 
 	@Override
 	public void channelRead0(ChannelHandlerContext ctx, Object msg) throws Exception {
+
+		System.out.println(11111);
+		System.out.println(22222222);
+
 		ByteBuf buf = (ByteBuf) msg;
 		byte[] req = new byte[buf.readableBytes()];
 		buf.readBytes(req);
