@@ -43,7 +43,6 @@ public class TcpServerHandler extends SimpleChannelInboundHandler<Object> {
 	 */
 	@Override
 	public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
-		log.info("当前连接大小：" + ctxs.size());
 		ctxs.put(UUID.randomUUID().toString(), ctx);
 		log.info("设备上线：" + ctx.channel().remoteAddress().toString() + "	当前连接数：" + ctxs.size());
 	}
